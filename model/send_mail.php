@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Authors : Pedroletti Michael
+ * CreationFile date : 10.01.2022
+ * Description : File used to verify and send mail
+**/
 function sendEmail($inf)
 {
 	if (isset($inf['firstname']) && isset($inf['lastname']) && isset($inf['mail']) && isset($inf['subject']))

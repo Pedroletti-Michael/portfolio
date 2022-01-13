@@ -4,9 +4,6 @@
  * CreationFile date : 10.01.2022
  * Description : Serve to redirect the user depending of his actions
 **/
-
-// Calcul de mon age a faire ici
-$age = 19;
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +27,7 @@ $age = 19;
     <section class="yellow">
         <h1>Bonjour et bienvenu</h1>
         <h2>Sur mon portfolio - Pedroletti Michael</h2>
+          <a class="button" href="#form">Besoin d'aide ?</a>
         <div class="spacer"></div>
         <div class="curve"></div>
     </section>
@@ -37,7 +35,7 @@ $age = 19;
     <section>
       <h1>À propos de moi</h1>
       <p>
-        Je suis âgé de 19 ans, titulaire d'un CFC d'informaticien, je viens d'intégrer l'école 42 Lausanne,
+        Je suis âgé de <?= $year; ?> ans, titulaire d'un CFC d'informaticien, je viens d'intégrer l'école 42 Lausanne,
         où j'ai commencé depuis le 11 octobre une formation spécialisée dans le développement informatique.
         Je souhaite en parrallèle de mes études pouvoir compléter des projets en informatique,
         afin d'accroître mes compétences et connaissances professionnels. Cela me premettra aussi
@@ -208,7 +206,7 @@ $age = 19;
     </section>
     <div class="lspacer"></div>
     <section>
-      <h1>Formulaire de contact</h1>
+      <h1 id="form">Formulaire de contact</h1>
       <p>
         Je vous invite par le biais de ce formulaire de contact à formuler votre demande, que ce soit pour la réalisation
         d'un projet ou la résolution d'un problème. Afin de faciliter nos futurs collaboration je vous demanderai d'être le
@@ -218,7 +216,7 @@ $age = 19;
         Si vous avez une quelconque question n'hésitez pas
         à utiliser le formulaire ci-dessous en sélectionnant la case "question".
       </p>
-      <form action="?action=sendMail" method="post">
+      <form action="/send_mail.php" method="post">
         <div class="row">
           <div class="col-25">
             <label for="fname">Prénom</label>
@@ -256,7 +254,7 @@ $age = 19;
         </div>
       </form>
       <p>
-        Vos données ne sont pas stockée, les informations sont incorporées dans un mail qui m'est envoyé pour que je puisse
+        Vos données ne sont pas stockées, les informations sont incorporées dans un mail qui m'est envoyé pour que je puisse
         vous répondre dans les meilleures délais.
       </p>
       <div class="lspacer"></div>

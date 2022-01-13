@@ -8,6 +8,8 @@
 function displayHome()
 {
 	$_GET['action'] = '';
+	require_once 'model/date.php';
+	$year = ageCalculator('2002-04-21');
     require 'view/home.php';
 }
 
