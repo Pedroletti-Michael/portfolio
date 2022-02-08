@@ -8,6 +8,9 @@
     <meta name="description" content="Portfolio Pedroletti Michael - Informaticien Suisse">
     <meta name="author" content="Pedroletti Michael">
 
+    <!-- Google Validation-->
+    <meta name="google-site-verification" content="_i26S-VAOksfPL7lA_BclwBLtc5jT1MEyYd_JIfRXRc" />
+
     <!-- Tab image -->
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" alt="Michael Pedroletti Portfolio"/>
 
@@ -16,15 +19,15 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
 
   </head>
 
@@ -34,7 +37,7 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Portfolio Pedroletti</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Photo Michael Pedroletti">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/michael_pedroletti.jpg" alt="Photo Michael Pedroletti">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,6 +62,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contactForm">Formulaire de contact</a>
           </li>
         </ul>
       </div>
@@ -94,7 +100,7 @@
               </li>
             </ul>
 
-            <a href="mailto:name@email.com">michael@pedroletti.ch</a>
+            <!--<a href="mailto:name@email.com">michael@pedroletti.ch</a>-->
             
           </div>
 
@@ -116,8 +122,8 @@
           </p>
 
           <p>
-            Je suis à disposition pour toutes questions ou projets que vous souhaitez me soumettre par adresse mail. Vous pouvez me joindre via le mail
-            disponible juste en dessous du titre en haut de page.
+            Je suis à disposition pour des propositions de projets/jobs via le formulaire se trouvant en bas de page. Vous pouvez aussi utiliser
+            le menu disponible à gauche de l'écran ou le menu déroulant sur la version téléphone.
           </p>
 
           <ul class="list-inline list-social-icons mb-0">
@@ -358,58 +364,55 @@
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contactForm">
         <div class="my-auto">
-          <h2 class="mb-5">Contact</h2>
-          
-          <p>
-            Je vous invite par le biais de ce formulaire de contact à prendre contact avec moi, puis nous pourrons échanger par mail pour la suite de notre
-            collaboration.<br>
-            Vous pouvez aussi utiliser ce formulaire si vous avez une question ou suggestion.
-          </p>
-          
-          <form action="/send_mail.php" method="post">
-            <div class="row">
-              <div class="col-25">
-                <label for="fname">Prénom</label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Joe" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="lname">Nom</label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Doe" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="mail">Adresse e-mail</label>
-              </div>
-              <div class="col-75">
-                <input type="email" id="mail" name="mail" placeholder="joe.doe@gmail.com" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="subject">Sujet</label>
-              </div>
-              <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Décriver votre projet ou problème" style="height:200px" required></textarea>
-              </div>
-            </div>
-            <div class="row submit">
-              <input type="submit" value="Envoyer">
-            </div>
-          </form>
+          <h2 class="mb-5">Formulaire de contact</h2>
 
+          <p>
+            Je vous invite par le biais de ce formulaire de contact à formuler le plus précisément votre question/proposition. Les données demandées
+            me serviront pour comprendre votre projet/demande d'aide, soyez donc le plus explicite possible. Je vous invite à sélectionner le sujet
+            correspondant à votre besoin pour que je puisse traiter au mieux votre demande.
+          </p>
+
+          <form method="post" action="send_mail.php">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstname">Prénom</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Nom</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom de famille" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="joe.doe@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject" class="form-control" required>
+                <option selected>Besoin d'aide</option>
+                <option>Recommandation</option>
+                <option>Projets</option>
+                <option>Questions</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="title">Titre</label>
+              <input type="title" class="form-control" id="title" name="title" placeholder="Problème avec mon ordinateur" required>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" name="description" placeholder="Ceci est une description" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
         </div>
       </section>
 
     </div>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
